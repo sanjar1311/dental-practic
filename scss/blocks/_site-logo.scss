@@ -1,0 +1,24 @@
+.site-logo {
+  display: none;
+}
+
+@include breakpoint-down (1180) {
+
+  .site-logo {
+    display: block;
+    padding: 23px 0 24px 0;
+    margin-right: auto;
+  }
+
+  .site-logo__img {
+    display: block;
+  }
+}
+
+@include breakpoint-down (768) {
+
+  .nojs .site-logo {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

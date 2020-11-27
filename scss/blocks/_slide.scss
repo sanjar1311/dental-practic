@@ -1,0 +1,132 @@
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #FFFFFF;
+  border-radius: 5px;
+  width: 200px;
+  height: 240px;
+  box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1);
+  padding-top: 28px;
+  padding-bottom: 24px;
+  margin: 35px 0;
+}
+
+.slide__title {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 79px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #272727;
+
+  &::before {
+    content: "";
+    display: block;
+    margin: 0;
+    margin-bottom: 13px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.slide__title--dental::before {
+  width: 69px;
+  height: 68px;
+  background-image: url("../img/s-dental.png");
+}
+
+.slide__title--hygiene::before {
+  width: 77px;
+  height: 66px;
+  background-image: url("../img/s-hygiene.png");
+}
+
+.slide__title--diagnostics::before {
+  width: 66px;
+  height: 66px;
+  background-image: url("../img/s-diagnostics.png");
+}
+
+.slide__title--dentistry::before {
+  width: 73px;
+  height: 62px;
+  background-image: url("../img/s-dentistry.png");
+}
+
+.slide__old-cost {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.25);
+  margin: 0;
+  margin-bottom: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #0A60C3;
+    margin: 10px 0;
+  }
+}
+
+.slide__new-cost {
+  color: #0A60C3;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  margin: 0;
+}
+
+
+@include breakpoint-down (1050) {
+
+  .slide--last {
+    display: none;
+  }
+}
+
+@include breakpoint-down (850) {
+
+  .slide--thirth {
+    display: none;
+  }
+}
+
+@include breakpoint-down (600) {
+
+  .slide--second {
+    display: none;
+  }
+}
+
+@include retina-bg {
+
+  .slide__title--dental::before {
+    background-image: url("../img/s-dental@2x.png");
+  }
+
+  .slide__title--hygiene::before {
+    background-image: url("../img/s-hygiene@2x.png");
+  }
+
+  .slide__title--diagnostics::before {
+    background-image: url("../img/s-diagnostics@2x.png");
+  }
+
+  .slide__title--dentistry::before {
+    background-image: url("../img/s-dentistry@2x.png");
+  }
+}

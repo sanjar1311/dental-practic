@@ -1,0 +1,15 @@
+.main {
+  margin-top: 127px;
+}
+
+@include breakpoint-down (1180){
+  .main {
+    margin-top: 75px;
+  }
+}
+
+@include breakpoint-down (768){
+  .main {
+    margin-top: 62px;
+  }
+}

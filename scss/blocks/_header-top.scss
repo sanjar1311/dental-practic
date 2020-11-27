@@ -1,0 +1,105 @@
+.site-header__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0 56px 0;
+}
+
+.header-top__phone {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #272727;
+
+  &::before{
+    content: "";
+    display: block;
+    width: 29px;
+    height: 29px;
+    background-image: url("../img/phone.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin-right: 7px;
+  }
+}
+
+.header-phone-text {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #272727;
+}
+
+.header-top__phone-link {
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 300;
+  color: #272727;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.header-top__logo-img {
+  object-fit: cover;
+  display: block;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.header-top__time {
+  display: flex;
+  align-items: center;
+
+  &::before{
+    content: "";
+    display: block;
+    width: 29px;
+    height: 29px;
+    background-image: url("../img/clock.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin-right: 7px;
+  }
+}
+
+.header-top__time-open {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #00B007;
+}
+
+.header-top__time-text {
+  margin: 0;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #272727;
+}
+
+@include retina-bg {
+
+  .header-top__phone::before{
+      background-image: url("../img/phone@2x.png");
+  }
+
+  .header-top__time::before{
+      background-image: url("../img/clock@2x.png");
+  }
+}

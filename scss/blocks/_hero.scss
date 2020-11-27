@@ -1,0 +1,115 @@
+.hero {
+  position: relative;
+  margin-top: -35px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.hero__container {
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: stretch;
+}
+
+.hero__item-treatment {
+  width: 100%;
+  padding: 39px 37px;
+  max-width: 300px;
+  background-color: #FFD600;
+}
+
+.hero__item-title {
+  text-align: center;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: normal;
+  color: #272727;
+}
+
+.hero__item-title--treatment::before {
+  content: "";
+  display: block;
+  width: 87px;
+  height: 86px;
+  background-image: url("../img/hero-box-1.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 19px;
+}
+
+.hero__item-title--prosthetics::before {
+  content: "";
+  display: block;
+  width: 87px;
+  height: 86px;
+  background-image: url("../img/hero-box-2.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 19px;
+}
+
+.hero__item-text {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: normal;
+  color: #272727;
+}
+
+.hero__item-prosthetics {
+  width: 100%;
+  padding: 39px 37px;
+  max-width: 300px;
+  background-color: #FFE040;
+}
+
+
+@include breakpoint-down (1082) {
+
+  .hero {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero__container {
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero__list {
+    display: none;
+  }
+
+  .hero__contact-form {
+    margin-top: 35px;
+    width: 100%;
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+}
+
+@include retina-bg {
+
+  .hero__item-title--treatment::before {
+    background-image: url("../img/hero-box-1@2x.png");
+  }
+
+  .hero__item-title--prosthetics::before {
+    background-image: url("../img/hero-box-2@2x.png");
+  }
+}

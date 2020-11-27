@@ -1,0 +1,36 @@
+
+.burger__btn {
+  display: none;
+}
+
+@include breakpoint-down (768) {
+
+  .burger__btn {
+    display: block;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    outline: none;
+  }
+
+  .burger__btn--open {
+    width: 25px;
+    height: 20px;
+    background-image: url("../img/gamburger.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .burger__btn--close {
+    width: 25px;
+    height: 20px;
+    background-image: url("../img/close-btn.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .nojs .burger__btn {
+    display: none;
+  }
+}
