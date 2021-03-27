@@ -5,12 +5,9 @@
   text-align: center;
   background: #FFFFFF;
   border-radius: 5px;
-  width: 200px;
-  height: 240px;
   box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1);
   padding-top: 28px;
   padding-bottom: 24px;
-  margin: 35px 0;
 }
 
 .slide__title {
@@ -91,26 +88,26 @@
 }
 
 
-@include breakpoint-down (1050) {
+// @include breakpoint-down (1050) {
 
-  .slide--last {
-    display: none;
-  }
-}
+//   .slide--last {
+//     display: none;
+//   }
+// }
 
-@include breakpoint-down (850) {
+// @include breakpoint-down (850) {
 
-  .slide--thirth {
-    display: none;
-  }
-}
+//   .slide--thirth {
+//     display: none;
+//   }
+// }
 
-@include breakpoint-down (600) {
+// @include breakpoint-down (600) {
 
-  .slide--second {
-    display: none;
-  }
-}
+//   .slide--second {
+//     display: none;
+//   }
+// }
 
 @include retina-bg {
 

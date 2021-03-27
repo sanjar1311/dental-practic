@@ -1,5 +1,8 @@
 .slider {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .slider__btn {
@@ -11,6 +14,7 @@
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: center center;
+  z-index: 15;
 
   &:hover {
     opacity: 0.8;
@@ -23,23 +27,47 @@
 
 .slider__btn--preev {
   background-image: url("../img/preev.svg");
-  left: -21px;
+  left: -70px;
   top: calc(50% - 21px);
 }
 
 .slider__btn--next {
   background-image: url("../img/next.svg");
-  right: -21px;
+  right: -70px;
   top: calc(50% - 21px);
 }
 
 .slider__list {
-  overflow: hidden;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   margin: 0;
   padding: 0;
   list-style: none;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.slider__item {
+  width: 200px;
+  height: 240px;
+  margin: 35px 15px !important;
+  flex-shrink: 0;
+  transition: transform .5s ease;
+}
+
+@include breakpoint-down (1300) {
+  .slider__list {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .slider__btn--preev {
+    left: 0;
+  }
+
+  .slider__btn--next {
+    right: 0;
+  }
 }
 
 @include breakpoint-down (1180) {
@@ -56,7 +84,7 @@
 
 @include breakpoint-down (380) {
 
-  .slider__btn {
-    display: none;
-  }
+  // .slider__btn {
+  //   display: none;
+  // }
 }
