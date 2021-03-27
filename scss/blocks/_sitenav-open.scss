@@ -9,6 +9,7 @@
     height: 75%;
     background-color: #0055B8;
     padding: 0;
+    animation: burger 1s ease;
   }
 
   .sitenav-open .sitenav__list {
@@ -45,5 +46,14 @@
   .sitenav-open .sitenav__social-links {
     justify-content: center;
     margin-top: 63px;
+  }
+}
+
+@keyframes burger {
+  0% {
+    transform: translateY(-100vw);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
