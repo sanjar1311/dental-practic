@@ -21,18 +21,18 @@ let index = 0;
 document.documentElement.style.setProperty("--index", index)
 
 nextBtn.addEventListener('click', function() {
-  if(index <= 1) {
+  if(index <= 3) {
     index = index + 1
   }
   sliderItem.forEach(item=> {
-    item.style.transform=`translateX(calc(${index * -200}px))`;
+    item.style.transform=`translateX(calc(${index * -230}px))`;
   })
 })
 
 preevBtn.addEventListener('click', function() {
-  if(index >= -1)
+  if(index >= -3)
   index = index - 1
   sliderItem.forEach(item=> {
-    item.style.transform = `translateX(calc(${index * -200}px))`;
+    item.style.transform = `translateX(calc(${index * -230}px ))`;
   })
 })

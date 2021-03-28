@@ -27,14 +27,16 @@
 
 .slider__btn--preev {
   background-image: url("../img/preev.svg");
-  left: -70px;
+  left: calc(50% - 580px);
   top: calc(50% - 21px);
+  margin-left: 15px;
 }
 
 .slider__btn--next {
   background-image: url("../img/next.svg");
-  right: -70px;
+  right: calc(50% - 580px);
   top: calc(50% - 21px);
+  margin-right: 25px;
 }
 
 .slider__list {
@@ -44,7 +46,10 @@
   padding: 0;
   list-style: none;
   overflow-x: hidden;
-  width: 100%;
+  width: 66vw;
+  max-width: 66vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .slider__item {
@@ -56,35 +61,31 @@
 }
 
 @include breakpoint-down (1300) {
+  .slider__btn--preev {
+    left: 0;
+  }
+
+  .slider__btn--next {
+    right: 0;
+  }
+}
+
+
+@include breakpoint-down (670) {
+
   .slider__list {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 90vw;
+    max-width: 90vw;
   }
+  .slider__btn {
+    top: 100%;
+  }
+
   .slider__btn--preev {
-    left: 0;
+    left: calc(50% - 100px);
   }
 
   .slider__btn--next {
-    right: 0;
+    right: calc(50% - 100px);
   }
-}
-
-@include breakpoint-down (1180) {
-
-  .slider__btn--preev {
-    left: 0;
-  }
-
-  .slider__btn--next {
-    right: 0;
-  }
-}
-
-
-@include breakpoint-down (380) {
-
-  // .slider__btn {
-  //   display: none;
-  // }
 }
